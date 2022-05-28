@@ -27,5 +27,33 @@
     
     <button type="submit" class="btn btn-primary">Sign Up</button>
   </form>
+<br />
+<br />
 
+<table>
+  <header>
+    <title> Check out our list of movies </title>
+    <tr>
+      <td>Movie Title</td>
+      <td>Movie Description</td>
+      <td>Movie Image</td>
+      <td>Movie link</td>
+    </tr>
+  </header>
+
+<body>
+  {% for movie in movies %}
+  <tr>
+    <td>{{ movie.title }}</td>
+    <td>{{ movie.description }}</td>
+    <td><img src="{{ movie.image.url }}"></td>
+    {% if movie.url %}
+    <td><a href="{{ movie.url }}">Go To The Movie Link</a></td>
+    {% endif %}
+  </tr>
+ 
+</body>
+{% endfor %}
+
+</table>
   {% endblock %}

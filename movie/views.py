@@ -6,7 +6,7 @@ from .models import Movie
 def MovieHomeView(request):
     name = 'Ayobami'
     searchTerm = request.GET.get('searchMovie')
-    movies = Movie.object.all()
+    movies = Movie.objects.all()
     return render(request, "movie/home.html",
     {'name':name,
     'searchTerm':searchTerm,
