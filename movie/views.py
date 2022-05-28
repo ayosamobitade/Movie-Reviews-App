@@ -9,7 +9,7 @@ def home(request):
     })
 
 def MovieView(request):
-    return render(request, 'home.html')
+    return render(request, 'movie/home.html')
 
 def about(request):
     return render(request, 'movie/about.html')

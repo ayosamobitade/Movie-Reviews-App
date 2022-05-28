@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home: Welcome to Our Movie Home Page</title>
-</head>
-<body>
-    <h2>Welcome {{ name }}, to Our Movie Home Page </h2>
-</body>
-</html>
+{% extends 'movie/base/base.html' %}
+
+
+{% block title %} My Specia home page {% endblock %}
+
+{% block main_title %} Welcome to our home page {% endblock %}
+
+{% block content %}
+<form action="{% url 'homepage' %}">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Search for movie:</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+  {% endblock %}
