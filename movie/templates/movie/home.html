@@ -3,7 +3,7 @@
 
 {% block title %} My Specia home page {% endblock %}
 
-{% block main_title %} Welcome to our home page {% endblock %}
+{% block main_title %} Welcome {{ name }}, to our home page {% endblock %}
 
 {% block content %}
 <form action="{% url 'homepage' %}">
@@ -14,5 +14,18 @@
     <button type="submit" class="btn btn-primary">Search for Movie</button>
   </form>
 
+  Searching for {{ searchTerm }}
+<br />
+<br />
+<h2>Join our mailing list:</h2>
+  <form action="{% url 'signuppage' %}">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" name="email" />
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+  </form>
 
   {% endblock %}

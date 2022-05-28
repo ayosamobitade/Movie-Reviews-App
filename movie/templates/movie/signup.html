@@ -1,0 +1,9 @@
+
+{% extends 'movie/base/base.html' %}
+
+{% block main_title %} Thank you for subscribing {% endblock %}</h1>
+    
+{% block subtitle %} Hi {{ email }} your Subscription is succesfull {% endblock %}
+{% block content %}
+<h2><a href="{% url 'homepage' %}">Home</a></h2>
+{% endblock %}
