@@ -1,10 +1,10 @@
 from django.urls import path
-from .views import MovieView, home, about
+from .views import MovieHomeView, about
 
 
 urlpatterns = [
-    path('movie', MovieView, name = "home"),
-    path('', home, name = 'homepage'),
+    
+    path('', MovieHomeView, name = 'homepage'),
     path('about/', about, name = 'aboutpage')
 
 ]
